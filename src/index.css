@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-slate-900/40 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+  
+  .glass-nav {
+    @apply bg-slate-950/80 backdrop-blur-lg border-b border-white/5;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500;
+  }
+
+  .btn-premium {
+    @apply px-8 py-3 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-bold rounded-full 
+           hover:shadow-[0_0_20px_rgba(251,191,36,0.4)] transition-all duration-300 transform hover:-translate-y-1;
+  }
+
+  .section-padding {
+    @apply py-24 px-6 md:px-12 lg:px-24;
+  }
+}
+
+/* 3D Floating Shapes Animation */
+@keyframes float3D {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  33% { transform: translate3d(10px, -20px, 0) rotate(5deg); }
+  66% { transform: translate3d(-10px, 10px, 0) rotate(-5deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+
+.animate-3d {
+  animation: float3D 10s ease-in-out infinite;
+}

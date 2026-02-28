@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/",
+            "destination": "/chemediit_complete.html"
+        }
+    ]
+}
